@@ -1,0 +1,30 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "{{taskguid}}",
+    "name": "YAML2Variables",
+    "friendlyName": "Yaml to Variables",
+    "description": "Convert Yaml file to Azure Devops pipeline variables",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Ameya Rajwade",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Yaml file to variables",
+    "inputs": [
+        {
+            "name": "yamlFile",
+            "type": "filePath",
+            "label": "Yaml file (full path)",
+            "required": true,
+            "helpMarkDown": "The location to load the YAML file from."
+        }
+    ],
+    "execution": {
+        "Node10": {
+            "target": "index.js"
+        }
+    }
+}
